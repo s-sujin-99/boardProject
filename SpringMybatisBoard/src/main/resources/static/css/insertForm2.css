@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+/* 기본 폰트 및 리셋 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    color: #262626;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+/* 상단 인스타 스타일 미니 네비게이션 바 */
+.nav-header {
+    width: 100%;
+    height: 60px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-bottom: 30px;
+}
+
+.nav-container {
+    width: 1000px;
+    max-width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-decoration: none;
+    color: #262626;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #8e8e8e;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 20px;
+    transition: color 0.2s;
+}
+
+.nav-menu a:hover {
+    color: #262626;
+}
+
+/* 중앙 메인 컨테이너 (인스타 카드 레이아웃) */
+.container {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    width: 350px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 리스트나 상세 페이지용 넓은 컨테이너 */
+.wide-container {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    width: 600px;
+    max-width: 95%;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.logo-title {
+    font-weight: 800;
+    font-size: 28px;
+    letter-spacing: -1px;
+    color: #262626;
+    margin-bottom: 12px;
+}
+
+.sub-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #8e8e8e;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* 폼 요소 */
+.register-form {
+    width: 100%;
+}
+
+.input-group {
+    width: 100%;
+    margin-bottom: 14px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 11px 12px;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #262626;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.input-field:focus {
+    border-color: #a8a8a8;
+    background-color: #ffffff;
+}
+
+.input-field:disabled {
+    background-color: #f1f1f1;
+    color: #8e8e8e;
+}
+
+/* 버튼 */
+.btn-submit {
+    width: 100%;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #1877f2;
+}
+
+/* 피드백 버튼 (취소, 수정, 삭제 등) */
+.btn-secondary {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    color: #262626;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    padding: 10px 0;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #fafafa;
+}
+
+.btn-danger {
+    background-color: #ed4956;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: #c92f3c;
+}
+
+/* 에러 및 텍스트 */
+.error-message {
+    display: block;
+    font-size: 11px;
+    color: #ed4956;
+    margin-top: 4px;
+}
+
+.footer-box {
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.footer-box a {
+    color: #0095f6;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 테이블 대신 쓰이는 피드 형태의 리스트/상세 스타일 */
+.insta-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.insta-table th {
+    text-align: left;
+    font-size: 13px;
+    color: #8e8e8e;
+    padding: 12px 8px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.insta-table td {
+    padding: 14px 8px;
+    font-size: 14px;
+    border-bottom: 1px solid #efefef;
+    color: #262626;
+}
+
+.insta-table tr:hover {
+    background-color: #fafafa;
+}
+
+.profile-circle {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: white;
+    text-align: center;
+    line-height: 32px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+}
