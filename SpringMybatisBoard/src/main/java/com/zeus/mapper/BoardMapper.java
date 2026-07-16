@@ -2,10 +2,11 @@ package com.zeus.mapper;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import com.zeus.domain.Board;
-
+@Mapper
 public interface BoardMapper {
     public int insert(Board board) throws Exception; 
     public Board select(Board board) throws Exception; 
